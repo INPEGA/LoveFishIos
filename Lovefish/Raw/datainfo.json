@@ -1,0 +1,31 @@
+{
+  "AccessLevel":"Restricted public",
+  "AverageScore":3,
+  "Category":"เกษตรกรรม และชลประทาน",
+  "ContactEmail":"sarindap@dof.in.th, nanthiyap@dof.in.th",
+  "ContactName":"คุณสรินดา เปลี่ยนแก้ว, คุณนันทิยา พูลสวัสดิ์",
+  "CreateDate":"2558-08-18T00:00:00.000+07:00",
+  "DataDictionary":"",
+  "DataSetItems":[
+    {
+      "Extension":"csv",
+      "Name":"DOF_fishbase.csv",
+      "UpdateDate":"2558-09-04T00:00:00.000+07:00"
+    }
+  ],
+  "Description":"ระบบฐานข้อมูลสัตว์น้ำของไทย จัดทำโดยกรมประมง จัดเก็บข้อมูลแยกตามวงศ์ของสัตว์น้ำ และชนิดสัตว์น้ำ (ปลาน้ำจืด ปลาชายฝั่ง ปลาทะเล ปลาจัดการ ปูน้ำจืด ปูชายฝั่ง ปูทะเล ปูจัดการ กุ้งน้ำจืด กุ้งชายฝั่ง กุ้งทะเล กุ้งจัดการ หอยน้ำจืด หอยชายฝั่ง หอยทะเล หอยจัดการ อึ่งน้ำจืด ตะพาบน้ำจืด เต่าน้ำจืด กบน้ำจืด) เป็นข้อมูลคงที่",
+  "Frequency":"Not updated(historical only)",
+  "GeoCoverage":"Thailand",
+  "Id":"cb5d392d-2824-4ac4-a171-2c4796ce81c2",
+  "IsNationalStat":false,
+  "Name":"ข้อมูลสัตว์น้ำของไทย กรมประมง",
+  "OpennessScore":3,
+  "PublishedDate":"2558-08-18T00:00:00.000+07:00",
+  "PublisherOrg":"กรมประมง",
+  "Status":"Published",
+  "TempEndDate":"-",
+  "TempStartDate":"-",
+  "URL":"https:\/\/data.go.th\/DatasetDetail.aspx?id=cb5d392d-2824-4ac4-a171-2c4796ce81c2",
+  "UpdateDate":"2558-09-04T16:15:58.007+07:00",
+  "VoteCount":4
+}

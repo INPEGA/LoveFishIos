@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f9m-FD-CxZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="thsarabunnew.ttf">
+            <string>THSarabunNew</string>
+            <string>THSarabunNew</string>
+            <string>THSarabunNew</string>
+        </mutableArray>
+        <mutableArray key="thsarabunnew_bold.ttf">
+            <string>THSarabunNew-Bold</string>
+            <string>THSarabunNew-Bold</string>
+            <string>THSarabunNew-Bold</string>
+            <string>THSarabunNew-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Meta Data-->
+        <scene sceneID="EIn-T4-4R5">
+            <objects>
+                <tableViewController storyboardIdentifier="meta" id="x80-65-bxe" customClass="MetaController" customModule="Lovefish" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hac-mY-9fd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="58" id="GXQ-an-ZZ7" customClass="InfoCell" customModule="Lovefish" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="58"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="GXQ-an-ZZ7" id="hWM-iv-yhB">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="57"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fU5-x5-jJV">
+                                            <rect key="frame" x="21" y="8" width="571" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="8ZV-Sn-94E"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="THSarabunNew-Bold" family="TH Sarabun New" pointSize="14"/>
+                                            <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubTitle" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEP-xS-HQn">
+                                            <rect key="frame" x="21" y="30" width="571" height="21"/>
+                                            <fontDescription key="fontDescription" name="THSarabunNew" family="TH Sarabun New" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oEP-xS-HQn" firstAttribute="top" secondItem="fU5-x5-jJV" secondAttribute="bottom" constant="1" id="GzF-B7-4eE"/>
+                                        <constraint firstItem="fU5-x5-jJV" firstAttribute="leading" secondItem="oEP-xS-HQn" secondAttribute="leading" id="K3z-tf-Td9"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="oEP-xS-HQn" secondAttribute="bottom" constant="-2" id="MeX-dj-K5H"/>
+                                        <constraint firstItem="fU5-x5-jJV" firstAttribute="trailing" secondItem="hWM-iv-yhB" secondAttribute="trailingMargin" id="Zik-8I-xmx"/>
+                                        <constraint firstItem="fU5-x5-jJV" firstAttribute="top" secondItem="hWM-iv-yhB" secondAttribute="topMargin" id="jPr-n3-foo"/>
+                                        <constraint firstItem="fU5-x5-jJV" firstAttribute="leading" secondItem="hWM-iv-yhB" secondAttribute="leadingMargin" constant="13" id="mpt-U4-WWq"/>
+                                        <constraint firstItem="fU5-x5-jJV" firstAttribute="trailing" secondItem="oEP-xS-HQn" secondAttribute="trailing" id="ynq-0r-bun"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelSubTitle" destination="oEP-xS-HQn" id="7ML-0p-Gl3"/>
+                                    <outlet property="labelTitle" destination="fU5-x5-jJV" id="z8O-jE-Y7g"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="x80-65-bxe" id="gas-Fk-n0x"/>
+                            <outlet property="delegate" destination="x80-65-bxe" id="cFC-cd-KOs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Meta Data" id="flc-bQ-MbE">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Gr9-Xg-qFg"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZe-op-vIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="1053"/>
+        </scene>
+        <!--License Controller-->
+        <scene sceneID="249-DO-fBD">
+            <objects>
+                <viewController storyboardIdentifier="license" id="ly2-qI-Sfp" customClass="LicenseController" customModule="Lovefish" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Br-bL-C0J"/>
+                        <viewControllerLayoutGuide type="bottom" id="WJk-YW-wJQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FZq-p5-GRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTj-C3-LHG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FTj-C3-LHG" secondAttribute="trailing" id="Dpp-KP-qKa"/>
+                            <constraint firstItem="FTj-C3-LHG" firstAttribute="top" secondItem="FZq-p5-GRZ" secondAttribute="top" id="VgX-FI-Zgv"/>
+                            <constraint firstItem="FTj-C3-LHG" firstAttribute="bottom" secondItem="WJk-YW-wJQ" secondAttribute="top" id="boS-zi-K1N"/>
+                            <constraint firstItem="FTj-C3-LHG" firstAttribute="leading" secondItem="FZq-p5-GRZ" secondAttribute="leading" id="o7F-wi-p4D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="FTj-C3-LHG" id="oW3-oV-dIj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U73-ic-0M7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="1755"/>
+        </scene>
+        <!--Third Party Controller-->
+        <scene sceneID="XPz-fL-dNd">
+            <objects>
+                <tableViewController storyboardIdentifier="third_party" id="NLb-lp-iLR" customClass="ThirdPartyController" customModule="Lovefish" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yuU-IO-UGZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Uf6-9E-mrp">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uf6-9E-mrp" id="PRb-Ak-Ms2">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NLb-lp-iLR" id="uVm-CI-yig"/>
+                            <outlet property="delegate" destination="NLb-lp-iLR" id="ebw-Yg-ZrR"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ob-75-d2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2594" y="1755"/>
+        </scene>
+        <!--Setting Controller-->
+        <scene sceneID="hgC-qA-Whm">
+            <objects>
+                <tableViewController id="dM1-t2-sSh" customClass="SettingController" customModule="Lovefish" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="43" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nid-MP-Por">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="EfS-QP-jyJ" rowHeight="43" style="IBUITableViewCellStyleDefault" id="6xU-ce-a2u">
+                                <rect key="frame" x="0.0" y="92" width="600" height="43"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6xU-ce-a2u" id="oKA-mp-JOo">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="42"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EfS-QP-jyJ">
+                                            <rect key="frame" x="15" y="0.0" width="550" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="THSarabunNew-Bold" family="TH Sarabun New" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dM1-t2-sSh" id="EV2-7g-6AZ"/>
+                            <outlet property="delegate" destination="dM1-t2-sSh" id="fnE-W8-QQ7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="xn9-zB-iEI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FWt-Ap-QUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="1053"/>
+        </scene>
+        <!--Detail Controller-->
+        <scene sceneID="fJx-8o-jDe">
+            <objects>
+                <tableViewController id="x17-VA-nfU" customClass="DetailController" customModule="Lovefish" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" id="Oe4-Bc-QDC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="61" id="zHV-cT-GTy" customClass="DetailCell" customModule="Lovefish" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="61"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zHV-cT-GTy" id="FqL-hW-4nN">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sR-1b-Asx">
+                                            <rect key="frame" x="15" y="8" width="571" height="21"/>
+                                            <fontDescription key="fontDescription" name="THSarabunNew-Bold" family="TH Sarabun New" pointSize="14"/>
+                                            <color key="textColor" red="0.086280281347231633" green="0.50802966217889989" blue="0.72000009284016642" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SubTitle" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRo-OG-K1Y">
+                                            <rect key="frame" x="15" y="31" width="571" height="21"/>
+                                            <fontDescription key="fontDescription" name="THSarabunNew" family="TH Sarabun New" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="eRo-OG-K1Y" secondAttribute="trailing" constant="6" id="5s5-E9-SCg"/>
+                                        <constraint firstItem="eRo-OG-K1Y" firstAttribute="leading" secondItem="FqL-hW-4nN" secondAttribute="leadingMargin" constant="7" id="9aT-7n-hAQ"/>
+                                        <constraint firstItem="9sR-1b-Asx" firstAttribute="top" secondItem="FqL-hW-4nN" secondAttribute="topMargin" id="Fnb-mQ-gWD"/>
+                                        <constraint firstItem="eRo-OG-K1Y" firstAttribute="top" secondItem="9sR-1b-Asx" secondAttribute="bottom" constant="6" id="Htp-kg-hhx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="9sR-1b-Asx" secondAttribute="trailing" constant="6" id="K6n-xG-Ble"/>
+                                        <constraint firstItem="9sR-1b-Asx" firstAttribute="leading" secondItem="FqL-hW-4nN" secondAttribute="leadingMargin" constant="7" id="a74-Qx-mtw"/>
+                                        <constraint firstItem="eRo-OG-K1Y" firstAttribute="bottom" secondItem="FqL-hW-4nN" secondAttribute="bottomMargin" id="ssz-1I-Zkv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelDetail" destination="eRo-OG-K1Y" id="Ivg-oD-BR2"/>
+                                    <outlet property="labelText" destination="9sR-1b-Asx" id="8Xl-il-Gka"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="x17-VA-nfU" id="4v7-NF-Jka"/>
+                            <outlet property="delegate" destination="x17-VA-nfU" id="uAa-hK-SWr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qfc-p8-X3s">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="xcY-4n-bmN"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDn-Zp-Ugz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="319"/>
+        </scene>
+        <!--List Controller-->
+        <scene sceneID="xQW-sg-ORn">
+            <objects>
+                <tableViewController id="aaP-eA-h5a" customClass="ListController" customModule="Lovefish" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" id="vT8-zg-NES">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PropertyCell" rowHeight="97" id="meT-lH-R5B" customClass="PropertyCell" customModule="Lovefish" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="97"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="meT-lH-R5B" id="2QL-Bq-nKQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="96"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nopic" translatesAutoresizingMaskIntoConstraints="NO" id="8dK-zr-9Bh">
+                                            <rect key="frame" x="8" y="6" width="83" height="83"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DX4-6y-lFR">
+                                            <rect key="frame" x="99" y="18" width="452" height="21"/>
+                                            <fontDescription key="fontDescription" name="THSarabunNew-Bold" family="TH Sarabun New" pointSize="14"/>
+                                            <color key="textColor" red="0.086280281350000002" green="0.50802966220000001" blue="0.72000009279999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SubTitle" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gd1-aq-apZ">
+                                            <rect key="frame" x="99" y="47" width="452" height="21"/>
+                                            <fontDescription key="fontDescription" name="THSarabunNew" family="TH Sarabun New" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="img" destination="8dK-zr-9Bh" id="ync-gF-U5R"/>
+                                    <outlet property="labelDetail" destination="gd1-aq-apZ" id="idT-xh-IXu"/>
+                                    <outlet property="labelText" destination="DX4-6y-lFR" id="IR5-ai-uQj"/>
+                                    <segue destination="x17-VA-nfU" kind="push" identifier="goDetail" id="uiY-IP-6cE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aaP-eA-h5a" id="hIr-bT-esS"/>
+                            <outlet property="delegate" destination="aaP-eA-h5a" id="gc2-4w-YUI"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="3vb-K1-O17">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="0DD-gX-rVD"/>
+                        <barButtonItem key="rightBarButtonItem" title="..." id="c8I-ky-93W">
+                            <connections>
+                                <segue destination="dM1-t2-sSh" kind="push" id="dw6-5c-RdH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lwe-5c-054" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="319"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UOJ-SB-Fb4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f9m-FD-CxZ" customClass="NavigationController" customModule="Lovefish" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Fs-Pz-CuI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aaP-eA-h5a" kind="relationship" relationship="rootViewController" id="iaT-7d-qDa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwm-dF-9J1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="319"/>
+        </scene>
+        <!--Web Controller-->
+        <scene sceneID="ywi-oq-NXo">
+            <objects>
+                <viewController storyboardIdentifier="Web" id="mZq-el-GC8" customClass="WebController" customModule="Lovefish" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DRW-2t-bKE"/>
+                        <viewControllerLayoutGuide type="bottom" id="pTQ-6h-5Xt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cYt-pg-976">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pd1-Zs-DMS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pd1-Zs-DMS" firstAttribute="bottom" secondItem="pTQ-6h-5Xt" secondAttribute="top" id="LYi-OO-IZe"/>
+                            <constraint firstItem="Pd1-Zs-DMS" firstAttribute="leading" secondItem="cYt-pg-976" secondAttribute="leading" id="OFK-bw-R0E"/>
+                            <constraint firstAttribute="trailing" secondItem="Pd1-Zs-DMS" secondAttribute="trailing" id="lRA-1C-EOQ"/>
+                            <constraint firstItem="Pd1-Zs-DMS" firstAttribute="top" secondItem="cYt-pg-976" secondAttribute="top" id="vEh-nF-TwH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Pd1-Zs-DMS" id="wUe-kU-t1b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTi-Oc-hnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3242" y="319"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nopic" width="550" height="550"/>
+    </resources>
+</document>
